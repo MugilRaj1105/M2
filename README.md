@@ -59,29 +59,26 @@ Write a C program to print the given triangular pattern using loop.
 ```
 ## PROGRAM:
 ```
-#include <stdio.h>
-
-int main() {
-    int rows;
-    
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
-    
-    for (int i = 1; i <= rows; i++) {
-        for (int j = 1; j <= i; j++) {
-            printf("*");
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for(int i=a;i>=1;i--)
+    {
+        for(int j=i;j>=1;j--)
+        {
+            printf("$");
         }
         printf("\n");
     }
-    
-    return 0;
 }
-
 ```
 
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/0bce4089-745e-4d8d-8a47-00d6ded74b32)
+![WhatsApp Image 2025-05-30 at 14 13 17_a3eff420](https://github.com/user-attachments/assets/c380cc07-504b-4fa8-a9f8-c4cbc311a587)
+
 
 ## RESULT:
 
@@ -160,34 +157,27 @@ Write a c program to find the sum of odd digits using for loop
 ## PROGRAM:
 ```
 #include <stdio.h>
-
-int main() {
-    int number, sum_odd = 0;
-    
-    printf("Enter a number: ");
-    scanf("%d", &number);
-    
-    // Handle negative numbers by converting to positive
-    if (number < 0) {
-        number = -number;
-    }
-    
-    for (; number > 0; number /= 10) {
-        int digit = number % 10;
-        if (digit % 2 != 0) {
-            sum_odd += digit;
-        }
-    }
-    
-    printf("Sum of odd digits: %d\n", sum_odd);
-    
-    return 0;
+int main()
+{
+   int a;
+   scanf("%d",&a);
+   int sum=0;
+   for(int i=0;i<2*a;i++)
+   {
+       if(i%2!=0)
+       {
+           printf("%d ",i);
+           sum=sum+i;
+       }
+   }
+   printf("\n");
+   printf("%d",sum);
 }
 ```
 
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/860709ff-2ff5-4f60-bd80-5ee041cc5179)
+![WhatsApp Image 2025-05-30 at 14 16 08_b21271a5](https://github.com/user-attachments/assets/c4b498e2-2df1-4268-89ae-72b4d8de93a2)
 
 ## RESULT:
 
@@ -223,7 +213,6 @@ void fact() {
     printf("Enter a number: ");
     scanf("%d", &N);
     
-    // Handle negative input
     if (N < 0) {
         printf("Factorial is not defined for negative numbers.\n");
         return;
